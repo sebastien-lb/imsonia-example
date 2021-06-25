@@ -1,0 +1,27 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71f0028f7c
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076833
+created: 1624630076833
+url: "{{ base_url }}/partner/v1/administrations/search/by-division-code"
+name: Find all partner administrations by division and subdivision codes
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: division-code
+    disabled: false
+    value: string
+  - name: subdivision-code
+    disabled: true
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076833
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,33 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71fa3e4eec
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076852
+created: 1624630076852
+url: "{{ base_url }}/v2/legal-entities"
+name: Search for a list of legal entities from a query
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: codeType
+    disabled: true
+    value: string
+  - name: codeValue
+    disabled: true
+    value: string
+  - name: query
+    disabled: true
+    value: string
+  - name: pageable
+    disabled: false
+    value: "[object Object]"
+headers: []
+authentication: {}
+metaSortKey: -1624630076852
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

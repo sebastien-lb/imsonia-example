@@ -1,0 +1,30 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e710c90a8ed
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076864
+created: 1624630076864
+url: "{{ base_url }}/partner/v1/administrations/search"
+name: /partner/v1/administrations/search
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "divisionCode": "string",
+      "subdivisionCode": "string",
+      "email": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076864
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

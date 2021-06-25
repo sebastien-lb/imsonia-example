@@ -1,0 +1,15 @@
+_id: env_env_4fb973329532689e1ac7730daffda1270b4204a0_sub
+type: Environment
+parentId: env_4fb973329532689e1ac7730daffda1270b4204a0
+modified: 1624630076894
+created: 1624630076894
+name: OpenAPI env
+data:
+  scheme: https
+  base_path: /third-party
+  host: api.dev.bel.cloud.bpifrance.fr
+  bearerToken: bearerToken
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1624630076894

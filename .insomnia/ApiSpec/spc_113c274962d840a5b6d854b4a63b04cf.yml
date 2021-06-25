@@ -1,0 +1,1427 @@
+_id: spc_113c274962d840a5b6d854b4a63b04cf
+type: ApiSpec
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630636906
+created: 1624630053852
+fileName: my-spec.yaml
+contents: "{\"openapi\":\"3.0.1\",\"info\":{\"title\":\"OpenAPI
+  definition\",\"version\":\"v0\"},\"servers\":[{\"url\":\"https://api.dev.bel.\
+  cloud.bpifrance.fr/third-party\",\"description\":\"This
+  server\"}],\"paths\":{\"/private-individuals/{privateIndividualId}/roles/{rol\
+  eId}\":{\"put\":{\"tags\":[\"private-individual-controller\"],\"summary\":\"M\
+  odify a role attached to a private
+  individual\",\"operationId\":\"modifyRoleInPrivateIndividual\",\"parameters\"\
+  :[{\"name\":\"privateIndividualId\",\"in\":\"path\",\"required\":true,\"schema\
+  \":{\"type\":\"string\"}},{\"name\":\"roleId\",\"in\":\"path\",\"required\":t\
+  rue,\"schema\":{\"type\":\"string\"}}],\"requestBody\":{\"content\":{\"applic\
+  ation/json\":{\"schema\":{\"$ref\":\"#/components/schemas/PrivateIndividualRo\
+  leInformationDto\"}}},\"required\":true},\"responses\":{\"424\":{\"description\
+  \":\"Failed Dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Role
+  modified\"}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMeth\
+  od\":\"PUT\"}}},\"/private-individuals/{privateIndividualId}/roles/{roleId}/s\
+  tatus\":{\"put\":{\"tags\":[\"private-individual-controller\"],\"summary\":\"\
+  Change the status of a role attached to a private
+  individual\",\"operationId\":\"modifyRoleStatusInPrivateIndividual\",\"parame\
+  ters\":[{\"name\":\"privateIndividualId\",\"in\":\"path\",\"required\":true,\
+  \"schema\":{\"type\":\"string\"}},{\"name\":\"roleId\",\"in\":\"path\",\"requ\
+  ired\":true,\"schema\":{\"type\":\"string\"}}],\"requestBody\":{\"content\":{\
+  \"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/PrivateIndi\
+  vidualRoleStatusModificationDto\"}}},\"required\":true},\"responses\":{\"424\
+  \":{\"description\":\"Failed Dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Role status
+  modified\"}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMeth\
+  od\":\"PUT\"}}},\"/partner/v1/administrations/{bankingAdministrationId}\":{\"\
+  put\":{\"tags\":[\"partner-administration-controller\"],\"summary\":\"Update
+  Banking Administrations
+  data\",\"operationId\":\"update\",\"parameters\":[{\"name\":\"bankingAdminist\
+  rationId\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"string\",\
+  \"format\":\"uuid\"}}],\"requestBody\":{\"content\":{\"application/json\":{\"\
+  schema\":{\"$ref\":\"#/components/schemas/PartnerAdministrationUpdateDto\"}}},\
+  \"required\":true},\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Banking administration not
+  found\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Successful
+  response\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/\
+  PartnerAdministrationDto\"}}}},\"500\":{\"description\":\"Internal server
+  error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/\
+  PartnerAdministrationDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer\
+  _token\",\"httpMethod\":\"GET\"}}},\"/bpi-internal-users\":{\"get\":{\"tags\"\
+  :[\"bpi-internal-user-controller\"],\"summary\":\"Get bpi internal users based
+  on
+  directoryIds\",\"operationId\":\"getInternalUsers\",\"parameters\":[{\"name\":\
+  \"directoryIds\",\"in\":\"query\",\"required\":false,\"schema\":{\"uniqueItems\
+  \":true,\"type\":\"array\",\"items\":{\"type\":\"string\"}}},{\"name\":\"query\
+  \",\"in\":\"query\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"r\
+  esponses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Return the list of bpi internal users linked to the provided
+  Ids\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\
+  \":\"#/components/schemas/BpiInternalUser\"}}}}}},\"deprecated\":true,\"x-bel\
+  \":{\"authorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}},\"put\
+  \":{\"tags\":[\"bpi-internal-user-controller\"],\"summary\":\"Create a
+  UserAccount entry in BEL reloaded for an internal user if
+  needed\",\"operationId\":\"createUserAccountForInternalUserIfNeeded\",\"respo\
+  nses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Internal user not
+  found\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"204\":{\
+  \"description\":\"User account created if
+  needed\"}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMethod\
+  \":\"PUT\"}},\"post\":{\"tags\":[\"bpi-internal-user-controller\"],\"summary\
+  \":\"Get bpi internal users based on directoryIds and
+  query\",\"operationId\":\"seachInternalUsers\",\"parameters\":[{\"name\":\"is\
+  QueryAll\",\"in\":\"query\",\"required\":false,\"schema\":{\"type\":\"boolean\
+  \"}}],\"requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"type\
+  \":\"object\",\"properties\":{\"internalUsersSearchQueryDto\":{\"$ref\":\"#/c\
+  omponents/schemas/InternalUsersSearchQueryDto\"},\"pageable\":{\"$ref\":\"#/c\
+  omponents/schemas/Pageable\"}}}}},\"required\":true},\"responses\":{\"424\":{\
+  \"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Return the list of bpi internal
+  users\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\
+  \":\"#/components/schemas/BpiInternalUser\"}}}}}},\"x-bel\":{\"authorizer\":\
+  \"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/user-feedback\":{\"g\
+  et\":{\"tags\":[\"user-feedbacks-controller\"],\"summary\":\"Gets the latest
+  feedback of the connected
+  user\",\"operationId\":\"getCurrentUserFeedback\",\"responses\":{\"424\":{\"d\
+  escription\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Feedback not
+  found\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Feedback fetched
+  sucessfully\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schem\
+  as/UserFeedbackDTO\"}}}},\"401\":{\"description\":\"Unauthorized\",\"content\
+  \":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/UserFeedbackDTO\"}}}\
+  }},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\
+  \"}},\"post\":{\"tags\":[\"user-feedbacks-controller\"],\"summary\":\"Adds a
+  line into the UserFeedback
+  table\",\"operationId\":\"postUserFeedback\",\"requestBody\":{\"content\":{\"\
+  application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/UserFeedbackD\
+  TO\"}}},\"required\":true},\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad format\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"Score successfully
+  saved\"},\"401\":{\"description\":\"Unauthorized\"}},\"x-bel\":{\"authorizer\
+  \":\"authorizer_bearer_token\"}}},\"/user-feedbacks\":{\"get\":{\"tags\":[\"u\
+  ser-feedbacks-controller\"],\"summary\":\"Gets the latest feedback of the
+  connected
+  user\",\"operationId\":\"getCurrentUserFeedback_1\",\"responses\":{\"424\":{\
+  \"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Feedback not
+  found\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Feedback fetched
+  sucessfully\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schem\
+  as/UserFeedbackDTO\"}}}},\"401\":{\"description\":\"Unauthorized\",\"content\
+  \":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/UserFeedbackDTO\"}}}\
+  }},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\
+  \"}},\"post\":{\"tags\":[\"user-feedbacks-controller\"],\"summary\":\"Adds a
+  line into the UserFeedback
+  table\",\"operationId\":\"postUserFeedback_1\",\"requestBody\":{\"content\":{\
+  \"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/UserFeedbac\
+  kDTO\"}}},\"required\":true},\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad format\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"Score successfully
+  saved\"},\"401\":{\"description\":\"Unauthorized\"}},\"x-bel\":{\"authorizer\
+  \":\"authorizer_bearer_token\"}}},\"/search/private-individuals\":{\"post\":{\
+  \"tags\":[\"search-controller\"],\"summary\":\"Search and return private
+  individuals according to
+  request\",\"operationId\":\"searchPrivateIndividuals\",\"requestBody\":{\"con\
+  tent\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Sea\
+  rchPrivateIndividualRequestDto\"}}},\"required\":true},\"responses\":{\"424\"\
+  :{\"description\":\"Failed dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"Private
+  individuals.\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\"\
+  :{\"$ref\":\"#/components/schemas/PrivateIndividualWithRoleDto\"}}}}}},\"x-bel\
+  \":{\"authorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"POST\"}}},\"/\
+  search/private-individual/identification\":{\"post\":{\"tags\":[\"search-cont\
+  roller\"],\"summary\":\"Get private individual corresponding to
+  identification\",\"operationId\":\"findPrivateIndividualFromIdentificationInfo\
+  \",\"requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"$ref\":\
+  \"#/components/schemas/PrivateIndividualIdentificationDto\"}}},\"required\":t\
+  rue},\"responses\":{\"424\":{\"description\":\"Failed
+  dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"All legal
+  entities\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/\
+  PrivateIndividualWithRoleDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_be\
+  arer_token\",\"httpMethod\":\"POST\"}}},\"/private-individuals\":{\"get\":{\"\
+  tags\":[\"private-individual-controller\"],\"summary\":\"Search and return
+  private individuals according to
+  request\",\"operationId\":\"searchPrivateIndividuals_1\",\"parameters\":[{\"n\
+  ame\":\"query\",\"in\":\"query\",\"required\":true,\"schema\":{\"type\":\"str\
+  ing\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Private
+  individuals.\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\"\
+  :{\"$ref\":\"#/components/schemas/PrivateIndividualWithRoleDto\"}}}}}},\"x-bel\
+  \":{\"authorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"POST\"}},\"po\
+  st\":{\"tags\":[\"private-individual-controller\"],\"summary\":\"Create a
+  private
+  individual\",\"operationId\":\"addPrivateIndividual\",\"requestBody\":{\"cont\
+  ent\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Priv\
+  ateIndividualIdentificationDto\"}}},\"required\":true},\"responses\":{\"424\"\
+  :{\"description\":\"Failed Dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"Private individual
+  created\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/P\
+  rivateIndividualWithRoleDto\"}}}},\"200\":{\"description\":\"Private
+  individual already
+  exists\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Pr\
+  ivateIndividualWithRoleDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bear\
+  er_token\",\"httpMethod\":\"POST\"}}},\"/private-individuals/{privateIndividu\
+  alId}/roles\":{\"post\":{\"tags\":[\"private-individual-controller\"],\"summa\
+  ry\":\"Attach a legal entity to a private
+  individual\",\"operationId\":\"attachLegalEntityToPrivateIndividual\",\"param\
+  eters\":[{\"name\":\"privateIndividualId\",\"in\":\"path\",\"required\":true,\
+  \"schema\":{\"type\":\"string\"}}],\"requestBody\":{\"content\":{\"applicatio\
+  n/json\":{\"schema\":{\"$ref\":\"#/components/schemas/PrivateIndividualRoleIn\
+  formationDto\"}}},\"required\":true},\"responses\":{\"424\":{\"description\":\
+  \"failed dependency\"},\"404\":{\"description\":\"private individual id does
+  not exist in database or link already exists\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"legal entity or role do not exist in database or link
+  already exists\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"Private Individual found from given
+  id\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}}},\"x-bel\":{\"\
+  authorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"POST\"}}},\"/privat\
+  e-individuals/{privateIndividualId}/roles/{roleId}/contact-information\":{\"p\
+  ost\":{\"tags\":[\"private-individual-controller\"],\"summary\":\"Attach
+  contact information to a role attached to a private
+  individual\",\"operationId\":\"addContactInformationToRole\",\"parameters\":[{\
+  \"name\":\"privateIndividualId\",\"in\":\"path\",\"required\":true,\"schema\"\
+  :{\"type\":\"string\"}},{\"name\":\"roleId\",\"in\":\"path\",\"required\":tru\
+  e,\"schema\":{\"type\":\"string\"}}],\"requestBody\":{\"content\":{\"applicat\
+  ion/json\":{\"schema\":{\"$ref\":\"#/components/schemas/ContactInformationDto\
+  \"}}},\"required\":true},\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"contact information
+  added\"}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMethod\
+  \":\"POST\"}}},\"/private-individuals/searches\":{\"post\":{\"tags\":[\"priva\
+  te-individual-controller\"],\"summary\":\"Get private individual corresponding
+  to search
+  parameter\",\"operationId\":\"findPrivateIndividualFromIdentificationInfo_1\",\
+  \"requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/\
+  components/schemas/PrivateIndividualIdentificationDto\"}}},\"required\":true},\
+  \"responses\":{\"424\":{\"description\":\"Failed
+  dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"All legal
+  entities\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/\
+  PrivateIndividualWithRoleDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_be\
+  arer_token\",\"httpMethod\":\"POST\"}}},\"/partner/v1/subdivisions/search\":{\
+  \"post\":{\"tags\":[\"subdivision-controller\"],\"summary\":\"Search
+  subdivions by
+  criteria\",\"operationId\":\"search\",\"requestBody\":{\"content\":{\"applica\
+  tion/json\":{\"schema\":{\"$ref\":\"#/components/schemas/SubdivisionSearchInp\
+  utDto\"}}},\"required\":true},\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad request\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"List of subdivions, may be
+  empty\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Sub\
+  divisionsDto\"}}}},\"500\":{\"description\":\"Internal server
+  error\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Sub\
+  divisionsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"h\
+  ttpMethod\":\"POST\"}}},\"/partner/v1/divisions/search\":{\"get\":{\"tags\":[\
+  \"division-controller\"],\"summary\":\"Find all divisions by email
+  domain\",\"operationId\":\"searchByEmailDomain\",\"parameters\":[{\"name\":\"\
+  email-domain\",\"in\":\"query\",\"required\":true,\"schema\":{\"type\":\"stri\
+  ng\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad request\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Find divisions relative to email domain (or empty
+  list)\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Div\
+  isionsDto\"}}}},\"500\":{\"description\":\"Internal server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/\
+  DivisionsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"h\
+  ttpMethod\":\"GET\"}},\"post\":{\"tags\":[\"division-controller\"],\"summary\
+  \":\"Search divisions by
+  criteria\",\"operationId\":\"search_1\",\"requestBody\":{\"content\":{\"appli\
+  cation/json\":{\"schema\":{\"$ref\":\"#/components/schemas/DivisionSearchInpu\
+  tDto\"}}},\"required\":true},\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad request\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"List of divisions, may be
+  empty\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Div\
+  isionsDto\"}}}},\"500\":{\"description\":\"Internal server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/\
+  DivisionsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"h\
+  ttpMethod\":\"POST\"}}},\"/partner/v1/administrations/search\":{\"post\":{\"t\
+  ags\":[\"partner-administration-controller\"],\"operationId\":\"search_2\",\"\
+  requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/co\
+  mponents/schemas/SearchPartnerAdministrationDto\"}}},\"required\":true},\"res\
+  ponses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"Created\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\
+  \",\"items\":{\"$ref\":\"#/components/schemas/PartnerAdministrationDto\"}}}}}\
+  },\"x-bel\":{\"authorizer\":\"none\",\"httpMethod\":\"POST\"}}},\"/partner/v1\
+  /administrations/data/transfoNumTpe/import\":{\"post\":{\"tags\":[\"partner-a\
+  dministration-controller\"],\"summary\":\"Import TransfoNumTPE Administrations
+  data in
+  DB\",\"operationId\":\"importTransfoNumData\",\"requestBody\":{\"content\":{\
+  \"multipart/form-data\":{\"schema\":{\"required\":[\"file\"],\"type\":\"object\
+  \",\"properties\":{\"file\":{\"type\":\"string\",\"format\":\"binary\"}}}}}},\
+  \"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"204\":{\
+  \"description\":\"Successful response\"},\"500\":{\"description\":\"Internal
+  server error
+  occurred\"}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMeth\
+  od\":\"POST\"}}},\"/partner/v1/administrations/data/region/import\":{\"post\"\
+  :{\"tags\":[\"partner-administration-controller\"],\"summary\":\"Import region
+  Administrations data in
+  DB\",\"operationId\":\"importRegionData\",\"requestBody\":{\"content\":{\"mul\
+  tipart/form-data\":{\"schema\":{\"required\":[\"file\"],\"type\":\"object\",\
+  \"properties\":{\"file\":{\"type\":\"string\",\"format\":\"binary\"}}}}}},\"r\
+  esponses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"204\":{\
+  \"description\":\"Successful response\"},\"500\":{\"description\":\"Internal
+  server error
+  occurred\"}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMeth\
+  od\":\"POST\"}}},\"/partner/v1/administrations/data/network/import\":{\"post\
+  \":{\"tags\":[\"partner-administration-controller\"],\"summary\":\"Import
+  network Administrations data in
+  DB\",\"operationId\":\"importNetworkData\",\"requestBody\":{\"content\":{\"mu\
+  ltipart/form-data\":{\"schema\":{\"required\":[\"file\"],\"type\":\"object\",\
+  \"properties\":{\"file\":{\"type\":\"string\",\"format\":\"binary\"}}}}}},\"r\
+  esponses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"204\":{\
+  \"description\":\"Successful response\"},\"500\":{\"description\":\"Internal
+  server error
+  occurred\"}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMeth\
+  od\":\"POST\"}}},\"/partner/v1/administrations/data/import\":{\"post\":{\"tags\
+  \":[\"partner-administration-controller\"],\"summary\":\"Import Partner
+  Administrations data in
+  DB\",\"operationId\":\"importAdministrationData\",\"responses\":{\"424\":{\"d\
+  escription\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"204\":{\
+  \"description\":\"Successful response\"},\"500\":{\"description\":\"Internal
+  server error
+  occurred\"}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMeth\
+  od\":\"POST\"}}},\"/legal-entities\":{\"get\":{\"tags\":[\"legal-entity-contr\
+  oller\"],\"summary\":\"Get legal entities by
+  idList\",\"operationId\":\"findLegalEntitiesByIds\",\"parameters\":[{\"name\":\
+  \"idList\",\"in\":\"query\",\"required\":false,\"schema\":{\"type\":\"array\",\
+  \"items\":{\"type\":\"string\"},\"default\":[]}},{\"name\":\"cpCodes\",\"in\":\
+  \"query\",\"required\":false,\"schema\":{\"type\":\"array\",\"items\":{\"type\
+  \":\"string\"},\"default\":[]}}],\"responses\":{\"424\":{\"description\":\"Fa\
+  iled Dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Legal entities associated to given
+  idList\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"object\",\"additionalPr\
+  operties\":{\"$ref\":\"#/components/schemas/LegalEntityWithDetailsDto\"}}}}}},\
+  \"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}\
+  },\"post\":{\"tags\":[\"legal-entity-controller\"],\"summary\":\"Post legal
+  entity\",\"operationId\":\"createLegalEntity\",\"requestBody\":{\"content\":{\
+  \"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/LegalEntity\
+  CreationDto\"}}},\"required\":true},\"responses\":{\"424\":{\"description\":\
+  \"Failed Dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Error in fields sent by the
+  user\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"201\":{\
+  \"description\":\"Legal entity
+  created\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/L\
+  egalEntityWithDetailsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer\
+  _token\",\"httpMethod\":\"POST\"}}},\"/v2/legal-entities\":{\"get\":{\"tags\"\
+  :[\"legal-entity-controller-v-2\"],\"summary\":\"Search for a list of legal
+  entities from a
+  query\",\"operationId\":\"findLegalEntitiesFromQuery\",\"parameters\":[{\"name\
+  \":\"codeType\",\"in\":\"query\",\"required\":false,\"schema\":{\"type\":\"st\
+  ring\"}},{\"name\":\"codeValue\",\"in\":\"query\",\"required\":false,\"schema\
+  \":{\"type\":\"string\"}},{\"name\":\"query\",\"in\":\"query\",\"required\":f\
+  alse,\"schema\":{\"type\":\"string\"}},{\"name\":\"pageable\",\"in\":\"query\
+  \",\"required\":true,\"schema\":{\"$ref\":\"#/components/schemas/Pageable\"}}\
+  ],\"responses\":{\"424\":{\"description\":\"Failed
+  dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"One or more required field is
+  missing\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Legal entitiy(es) corresponding to the provided query, can
+  be an empty
+  array\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\
+  \":\"#/components/schemas/LegalEntityWithDetailsDto\"}}}}}},\"x-bel\":{\"auth\
+  orizer\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/search/lega\
+  l-entity\":{\"get\":{\"tags\":[\"search-controller\"],\"summary\":\"Search for
+  a legal entity from an identification
+  code.\",\"operationId\":\"findLegalEntityFromIdentification\",\"parameters\":\
+  [{\"name\":\"codeType\",\"in\":\"query\",\"required\":true,\"schema\":{\"type\
+  \":\"string\"}},{\"name\":\"codeValue\",\"in\":\"query\",\"required\":true,\"\
+  schema\":{\"type\":\"string\"}}],\"responses\":{\"424\":{\"description\":\"Fa\
+  iled dependency\"},\"404\":{\"description\":\"No legal entity found
+  corresponding to the provided identification
+  code\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"One or more required field is
+  missing\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Legal entity corresponding to the provided identification
+  code\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Lega\
+  lEntityWithDetailsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_to\
+  ken\",\"httpMethod\":\"GET\"}}},\"/search/legal-entities\":{\"get\":{\"tags\"\
+  :[\"search-controller\"],\"summary\":\"Search for a list of legal entities
+  from a SIREN or a
+  name.\",\"operationId\":\"findLegalEntitiesFromQuery_1\",\"parameters\":[{\"n\
+  ame\":\"query\",\"in\":\"query\",\"required\":true,\"schema\":{\"type\":\"str\
+  ing\"}},{\"name\":\"pageable\",\"in\":\"query\",\"required\":true,\"schema\":{\
+  \"$ref\":\"#/components/schemas/Pageable\"}}],\"responses\":{\"424\":{\"descr\
+  iption\":\"Failed dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"One or more required field is
+  missing\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Deprecated, use GET /v2/legal-entities
+  instead\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$\
+  ref\":\"#/components/schemas/LegalEntityWithDetailsDto\"}}}}}},\"x-bel\":{\"a\
+  uthorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/search/b\
+  pi-internal-users\":{\"get\":{\"tags\":[\"search-controller\"],\"summary\":\"\
+  Search and return BPI internal user matching the
+  request\",\"operationId\":\"searchBpiInternalUsers\",\"parameters\":[{\"name\
+  \":\"query\",\"in\":\"query\",\"required\":true,\"schema\":{\"type\":\"string\
+  \"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"BPI internal users matching the
+  request\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$\
+  ref\":\"#/components/schemas/BpiInternalUser\"}}}}}},\"x-bel\":{\"authorizer\
+  \":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/project-natures/s\
+  earch\":{\"get\":{\"tags\":[\"project-nature-controller\"],\"summary\":\"Sear\
+  ch all project
+  natures\",\"operationId\":\"search_3\",\"parameters\":[{\"name\":\"query\",\"\
+  in\":\"query\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"respon\
+  ses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"List of project
+  natures\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$\
+  ref\":\"#/components/schemas/ProjectNatureDto\"}}}}},\"500\":{\"description\":\
+  \"Internal server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"\
+  $ref\":\"#/components/schemas/ProjectNatureDto\"}}}}}},\"x-bel\":{\"authorizer\
+  \":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/private-individua\
+  ls/{privateIndividualId}\":{\"get\":{\"tags\":[\"private-individual-controller\
+  \"],\"summary\":\"Get private individual by
+  id\",\"operationId\":\"getPrivateIndividualById\",\"parameters\":[{\"name\":\
+  \"privateIndividualId\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\
+  \":\"string\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  dependency\"},\"404\":{\"description\":\"NoPrivate Individual with this
+  id\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Private Individual found from given
+  id\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Privat\
+  eIndividualWithRoleDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_t\
+  oken\",\"httpMethod\":\"GET\"}}},\"/partner/v1/divisions\":{\"get\":{\"tags\"\
+  :[\"division-controller\"],\"summary\":\"Find divisions by division
+  code\",\"operationId\":\"searchDivisionsByDivisionCodes\",\"parameters\":[{\"\
+  name\":\"division-codes\",\"in\":\"query\",\"required\":true,\"schema\":{\"ty\
+  pe\":\"array\",\"items\":{\"type\":\"string\"}}}],\"responses\":{\"424\":{\"d\
+  escription\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad request\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Divisions by division
+  code\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Divi\
+  sionsDto\"}}}},\"500\":{\"description\":\"Internal server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/\
+  DivisionsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"h\
+  ttpMethod\":\"GET\"}}},\"/partner/v1/divisions/{divisionId}\":{\"get\":{\"tags\
+  \":[\"division-controller\"],\"summary\":\"Get the division by
+  id\",\"operationId\":\"findDivisionById\",\"parameters\":[{\"name\":\"divisio\
+  nId\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"string\",\"for\
+  mat\":\"uuid\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"No division found\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Division
+  found\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Div\
+  ision\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"httpMeth\
+  od\":\"GET\"}}},\"/partner/v1/divisions/{divisionCode}/subdivisions\":{\"get\
+  \":{\"tags\":[\"division-controller\"],\"summary\":\"Get all subdivisions by
+  division
+  code\",\"operationId\":\"getAllSubdivisions\",\"parameters\":[{\"name\":\"div\
+  isionCode\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"string\"\
+  }},{\"name\":\"pageable\",\"in\":\"query\",\"required\":true,\"schema\":{\"$r\
+  ef\":\"#/components/schemas/Pageable\"}}],\"responses\":{\"424\":{\"descripti\
+  on\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"division not
+  found\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"list of
+  subdivisions\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/sche\
+  mas/PageSubdivisionDto\"}}}},\"500\":{\"description\":\"internal server
+  error\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Pag\
+  eSubdivisionDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\
+  \"httpMethod\":\"GET\"}}},\"/partner/v1/divisions/search/subdivisions\":{\"get\
+  \":{\"tags\":[\"division-controller\"],\"summary\":\"Find all subdivisions by
+  division
+  codes\",\"operationId\":\"searchByDivisionCodes\",\"parameters\":[{\"name\":\
+  \"division-codes\",\"in\":\"query\",\"required\":true,\"schema\":{\"type\":\"\
+  array\",\"items\":{\"type\":\"string\"}}}],\"responses\":{\"424\":{\"descript\
+  ion\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad request\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Finds all subdivisions (or empty
+  list)\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Sub\
+  divisionsDto\"}}}},\"500\":{\"description\":\"Internal server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/\
+  SubdivisionsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\
+  \"httpMethod\":\"GET\"}}},\"/partner/v1/divisions/email-check/{partnerEmail}\
+  \":{\"get\":{\"tags\":[\"division-controller\"],\"summary\":\"Check email
+  partner is valid or
+  not\",\"operationId\":\"validateEmailPartner\",\"parameters\":[{\"name\":\"pa\
+  rtnerEmail\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"string\
+  \"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Invalid email\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"204\":{\
+  \"description\":\"Email is
+  valid\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"object\"}}}},\"500\":{\"\
+  description\":\"Internal Server
+  Error\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"object\"}}}}},\"x-bel\":{\
+  \"authorizer\":\"api_gateway_third_party\",\"httpMethod\":\"GET\"}}},\"/partn\
+  er/v1/divisions/eligibility/{partnerEmail}\":{\"get\":{\"tags\":[\"division-c\
+  ontroller\"],\"summary\":\"Check if email is valid and get all associated
+  divisions with an email and email informations
+  \",\"operationId\":\"findEligibleDivisionsFromEmail\",\"parameters\":[{\"name\
+  \":\"partnerEmail\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"\
+  string\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Invalid email\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Matched divisions from the given
+  email.\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"object\"}}}}},\"x-bel\"\
+  :{\"authorizer\":\"api_gateway_third_party\",\"httpMethod\":\"GET\"}}},\"/par\
+  tner/v1/administrations\":{\"get\":{\"tags\":[\"partner-administration-contro\
+  ller\"],\"summary\":\"find banking administrations from administrator
+  emails\",\"operationId\":\"searchBankingAdministration\",\"parameters\":[{\"n\
+  ame\":\"administrator-email\",\"in\":\"query\",\"required\":true,\"schema\":{\
+  \"type\":\"string\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"An array of
+  results\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$\
+  ref\":\"#/components/schemas/PartnerAdministrationDto\"}}}}},\"500\":{\"descr\
+  iption\":\"Internal server
+  error\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\
+  \":\"#/components/schemas/PartnerAdministrationDto\"}}}}}},\"x-bel\":{\"autho\
+  rizer\":\"none\",\"httpMethod\":\"GET\"}}},\"/partner/v1/administrations/sear\
+  ch/by-division-code\":{\"get\":{\"tags\":[\"partner-administration-controller\
+  \"],\"summary\":\"Find all partner administrations by division and subdivision
+  codes\",\"operationId\":\"findPartnerAdministrationByDivisionCode\",\"paramet\
+  ers\":[{\"name\":\"division-code\",\"in\":\"query\",\"required\":true,\"schema\
+  \":{\"type\":\"string\"}},{\"name\":\"subdivision-code\",\"in\":\"query\",\"r\
+  equired\":false,\"schema\":{\"type\":\"string\"}}],\"responses\":{\"424\":{\"\
+  description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad request\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"List of partner administrations, may be
+  empty\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Par\
+  tnerAdministrationsDto\"}}}},\"500\":{\"description\":\"Internal server
+  error\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Par\
+  tnerAdministrationsDto\"}}}}},\"x-bel\":{\"authorizer\":\"none\",\"httpMethod\
+  \":\"GET\"}}},\"/outstandings/short-term/{companyId}\":{\"get\":{\"tags\":[\"\
+  outstandings-controller\"],\"summary\":\"Retrieve short term outstandings from
+  eTreso\",\"operationId\":\"getShortTermOutstandings\",\"parameters\":[{\"name\
+  \":\"companyId\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"str\
+  ing\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Short term outstandings of the given
+  company\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$\
+  ref\":\"#/components/schemas/OutstandingDTO\"}}}}}},\"x-bel\":{\"authorizer\":\
+  \"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/outstandings/long-te\
+  rm/{companyId}\":{\"get\":{\"tags\":[\"outstandings-controller\"],\"summary\":\
+  \"Retrieve long term outstandings from
+  VCC\",\"operationId\":\"getLongTermOutstandings\",\"parameters\":[{\"name\":\
+  \"companyId\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"string\
+  \"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"The legal entity was not
+  found.\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Long term outstandings with client status of the given
+  company\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/O\
+  utstandingsWithStatusDTO\"}}}},\"503\":{\"description\":\"Fetching long term
+  outstandings failed because of
+  dependencies\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/sche\
+  mas/OutstandingsWithStatusDTO\"}}}},\"403\":{\"description\":\"You are not
+  allowed to do
+  this\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Outs\
+  tandingsWithStatusDTO\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_to\
+  ken\",\"httpMethod\":\"GET\"}}},\"/naf-codes/search\":{\"get\":{\"tags\":[\"n\
+  af-controller\"],\"summary\":\"Search NAF
+  codes\",\"operationId\":\"searchNafData\",\"parameters\":[{\"name\":\"query\",\
+  \"in\":\"query\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"respo\
+  nses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"All NAF
+  codes\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\
+  \":\"#/components/schemas/NafCsvDto\"}}}}},\"500\":{\"description\":\"Internal
+  server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"\
+  $ref\":\"#/components/schemas/NafCsvDto\"}}}}}},\"x-bel\":{\"authorizer\":\"a\
+  uthorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/naf/search\":{\"get\":{\
+  \"tags\":[\"naf-controller\"],\"summary\":\"Search NAF
+  codes\",\"operationId\":\"searchNafData_1\",\"parameters\":[{\"name\":\"query\
+  \",\"in\":\"query\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"re\
+  sponses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"All NAF
+  codes\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\
+  \":\"#/components/schemas/NafCsvDto\"}}}}},\"500\":{\"description\":\"Internal
+  server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"\
+  $ref\":\"#/components/schemas/NafCsvDto\"}}}}}},\"x-bel\":{\"authorizer\":\"a\
+  uthorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/legal-forms/search\":{\
+  \"get\":{\"tags\":[\"legal-form-controller\"],\"summary\":\"Search Legal
+  forms\",\"operationId\":\"searchLegalData\",\"parameters\":[{\"name\":\"query\
+  \",\"in\":\"query\",\"required\":true,\"schema\":{\"maxLength\":2147483647,\"\
+  minLength\":2,\"type\":\"string\"}}],\"responses\":{\"424\":{\"description\":\
+  \"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad Request\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"legal
+  forms\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\
+  \":\"#/components/schemas/LegalFormDto\"}}}}},\"500\":{\"description\":\"Inte\
+  rnal server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"\
+  $ref\":\"#/components/schemas/LegalFormDto\"}}}}}},\"x-bel\":{\"authorizer\":\
+  \"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/legal-entities/{lega\
+  lEntityId}\":{\"get\":{\"tags\":[\"legal-entity-controller\"],\"summary\":\"G\
+  et legal entity by
+  id\",\"operationId\":\"findLegalEntityById\",\"parameters\":[{\"name\":\"lega\
+  lEntityId\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"string\"\
+  }}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\"},\"404\":{\"description\":\"No legal entity with this
+  id\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Legal entity found from given
+  id\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/LegalE\
+  ntityWithDetailsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\
+  \",\"httpMethod\":\"GET\"}}},\"/legal-entities/{legalEntityId}/banking-data\"\
+  :{\"get\":{\"tags\":[\"legal-entity-controller\"],\"summary\":\"Get banking
+  data by legal entity
+  id\",\"operationId\":\"findBankingDataByLegalEntityId\",\"parameters\":[{\"na\
+  me\":\"legalEntityId\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\
+  \"string\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\"},\"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Banking data found from given legal entity
+  id\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\
+  \"#/components/schemas/BankingDataDto\"}}}}}},\"x-bel\":{\"authorizer\":\"aut\
+  horizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/legal-entities/by-cp-code\
+  /{cpCode}\":{\"get\":{\"tags\":[\"legal-entity-controller\"],\"summary\":\"Get
+  legal entity by
+  cpCode\",\"operationId\":\"findLegalEntityByCpCode\",\"parameters\":[{\"name\
+  \":\"cpCode\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"string\
+  \"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\"},\"404\":{\"description\":\"No legal entity with this
+  cpCode\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Legal entity found from given
+  cpCode\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Le\
+  galEntityWithDetailsDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_\
+  token\",\"httpMethod\":\"GET\"}}},\"/health-check-indicator\":{\"get\":{\"tags\
+  \":[\"health-check-indicator-controller\"],\"summary\":\"Check for True Third
+  Party routes
+  health\",\"operationId\":\"checkTrueThirdPartyHealth\",\"responses\":{\"424\"\
+  :{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Health check
+  done\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"object\",\"additionalProp\
+  erties\":{\"type\":\"string\",\"enum\":[\"DOWN\",\"UP\"]}}}}},\"401\":{\"desc\
+  ription\":\"Error in fields sent by the
+  user\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"object\",\"additionalProp\
+  erties\":{\"type\":\"string\",\"enum\":[\"DOWN\",\"UP\"]}}}}}},\"x-bel\":{\"a\
+  uthorizer\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/firm-inf\
+  ormation/{siren}\":{\"get\":{\"tags\":[\"firm-information-controller\"],\"sum\
+  mary\":\"Get an external firm information by
+  SIREN\",\"operationId\":\"getFirmInformationBySiren\",\"parameters\":[{\"name\
+  \":\"siren\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"string\
+  \"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Firm informations unavailable from
+  \"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Information from a firm with the provided
+  siren\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Fir\
+  mInformationResponseDTO\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_\
+  token\",\"httpMethod\":\"GET\"}}},\"/financing-natures/search\":{\"get\":{\"t\
+  ags\":[\"financing-nature-controller\"],\"summary\":\"Search financing
+  natures\",\"operationId\":\"searchFinancingNatureData\",\"parameters\":[{\"na\
+  me\":\"query\",\"in\":\"query\",\"required\":true,\"schema\":{\"maxLength\":2\
+  147483647,\"minLength\":2,\"type\":\"string\"}}],\"responses\":{\"424\":{\"de\
+  scription\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"If search query has less than 3
+  chars\"},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"All financing
+  natures\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$\
+  ref\":\"#/components/schemas/FinancingNatureDto\"}}}}},\"500\":{\"description\
+  \":\"Internal server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"\
+  $ref\":\"#/components/schemas/FinancingNatureDto\"}}}}}},\"x-bel\":{\"authori\
+  zer\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}},\"/business-types\
+  \":{\"get\":{\"tags\":[\"business-type-controller\"],\"summary\":\"Get all
+  business
+  types\",\"operationId\":\"findAll\",\"parameters\":[{\"name\":\"pageable\",\"\
+  in\":\"query\",\"required\":true,\"schema\":{\"$ref\":\"#/components/schemas/\
+  Pageable\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"All business
+  types\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/Pag\
+  eBusinessTypeDto\"}}}},\"500\":{\"description\":\"internal server error
+  occured\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/P\
+  ageBusinessTypeDto\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\
+  \",\"httpMethod\":\"GET\"}}},\"/bpi-internal-users/{directoryId}\":{\"get\":{\
+  \"tags\":[\"bpi-internal-user-controller\"],\"summary\":\"Get a bpi internal
+  user based on a
+  directoryId\",\"operationId\":\"getInternalUser\",\"parameters\":[{\"name\":\
+  \"directoryId\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"stri\
+  ng\"}}],\"responses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"Return the bpi internal user linked to the provided
+  Id\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/BpiInt\
+  ernalUser\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"http\
+  Method\":\"GET\"}}},\"/bpi-internal-users/by-email\":{\"get\":{\"tags\":[\"bp\
+  i-internal-user-controller\"],\"summary\":\"Get a bpi internal user based on
+  an e-mail
+  address\",\"operationId\":\"getByEmail\",\"parameters\":[{\"name\":\"email\",\
+  \"in\":\"query\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"respo\
+  nses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"User not found\"},\"502\":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"BPI internal
+  user\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/BpiI\
+  nternalUser\"}}}}},\"x-bel\":{\"authorizer\":\"authorizer_bearer_token\",\"ht\
+  tpMethod\":\"GET\"}}},\"/activity-sectors/search\":{\"get\":{\"tags\":[\"acti\
+  vity-sector-controller\"],\"summary\":\"Search activity
+  sectors\",\"operationId\":\"search_4\",\"parameters\":[{\"name\":\"query\",\"\
+  in\":\"query\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"respon\
+  ses\":{\"424\":{\"description\":\"Failed
+  Dependency\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\
+  \",\"additionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\
+  \"404\":{\"description\":\"Not
+  Found\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\"a\
+  dditionalProperties\":{\"type\":\"object\"}},{\"type\":\"string\"}]}}}},\"502\
+  \":{\"description\":\"Bad
+  Gateway\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\
+  \"description\":\"Bad
+  Request\",\"content\":{\"*/*\":{\"schema\":{\"oneOf\":[{\"type\":\"object\",\
+  \"additionalProperties\":{\"type\":\"object\"}},{\"$ref\":\"#/components/sche\
+  mas/ErrorBody\"}]}}}},\"422\":{\"description\":\"Unprocessable
+  Entity\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"string\"}}}},\"200\":{\
+  \"description\":\"List of activity
+  sectors\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$\
+  ref\":\"#/components/schemas/ActivitySectorDto\"}}}}},\"500\":{\"description\
+  \":\"Internal server error
+  occurred\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"\
+  $ref\":\"#/components/schemas/ActivitySectorDto\"}}}}}},\"x-bel\":{\"authoriz\
+  er\":\"authorizer_bearer_token\",\"httpMethod\":\"GET\"}}}},\"components\":{\
+  \"schemas\":{\"ErrorBody\":{\"type\":\"object\",\"properties\":{\"message\":{\
+  \"type\":\"string\"},\"errorType\":{\"type\":\"string\"}}},\"PrivateIndividua\
+  lRoleInformationDto\":{\"required\":[\"endDate\",\"isCertified\",\"legalEntit\
+  yId\",\"role\",\"startDate\",\"userAccountId\"],\"type\":\"object\",\"propert\
+  ies\":{\"legalEntityId\":{\"type\":\"string\",\"description\":\"legal entity
+  id used to link to private
+  individual\"},\"role\":{\"type\":\"string\",\"description\":\"Role used for
+  Private
+  Individual\",\"enum\":[\"LEGAL_REPRESENTATIVE\",\"DELEGATE\"]},\"userAccountId\
+  \":{\"type\":\"string\",\"description\":\"the user account Id of the
+  individual\"},\"isCertified\":{\"type\":\"boolean\",\"description\":\"Is the
+  role certified\"},\"startDate\":{\"type\":\"string\",\"description\":\"start
+  date of the role, can be
+  empty\",\"format\":\"date\"},\"endDate\":{\"type\":\"string\",\"description\":\
+  \"end date of the role, can be
+  empty\",\"format\":\"date\"},\"email\":{\"type\":\"string\",\"description\":\
+  \"E-mail address associated to this
+  role\"},\"mobile\":{\"type\":\"string\",\"description\":\"Phone number
+  associated to this
+  role\"}}},\"PrivateIndividualRoleStatusModificationDto\":{\"required\":[\"isC\
+  ertified\"],\"type\":\"object\",\"properties\":{\"isCertified\":{\"type\":\"b\
+  oolean\",\"description\":\"Is the role
+  certified\"}}},\"PartnerAdministrationUpdateDto\":{\"type\":\"object\",\"prop\
+  erties\":{\"administratorEmails\":{\"type\":\"array\",\"items\":{\"type\":\"s\
+  tring\"}},\"emailDomains\":{\"type\":\"array\",\"items\":{\"type\":\"string\"\
+  }}}},\"PartnerAdministrationDto\":{\"type\":\"object\",\"properties\":{\"id\"\
+  :{\"type\":\"string\",\"format\":\"uuid\"},\"divisionCode\":{\"type\":\"string\
+  \"},\"divisionLabel\":{\"type\":\"string\"},\"subdivisionCode\":{\"type\":\"s\
+  tring\"},\"subdivisionLabel\":{\"type\":\"string\"},\"administratorEmails\":{\
+  \"type\":\"array\",\"items\":{\"type\":\"string\"}},\"emailDomains\":{\"type\
+  \":\"array\",\"items\":{\"type\":\"string\"}},\"type\":{\"type\":\"string\",\
+  \"enum\":[\"BANK\",\"NETWORK\",\"PUBLIC\",\"TRANSFO_NUM_TPE\",\"REGION\"]}}},\
+  \"UserFeedbackDTO\":{\"required\":[\"scope\",\"score\"],\"type\":\"object\",\
+  \"properties\":{\"score\":{\"maximum\":10,\"minimum\":1,\"type\":\"integer\",\
+  \"description\":\"Score the user gave to the current
+  scope\",\"format\":\"int32\",\"example\":10},\"comment\":{\"maxLength\":1020,\
+  \"minLength\":0,\"type\":\"string\",\"description\":\"Any comment the user
+  made\",\"example\":\"This is
+  awesome\"},\"scope\":{\"type\":\"string\",\"description\":\"The scope on which
+  the user made the
+  feedback\",\"example\":\"cockpit\"},\"siren\":{\"type\":\"string\",\"descript\
+  ion\":\"The SIREN of the company if the form has a
+  company\",\"example\":\"123456789\"},\"projectId\":{\"type\":\"string\",\"des\
+  cription\":\"The id of the project the user added a feedback
+  to\",\"example\":\"123\"},\"lastModifiedDate\":{\"type\":\"string\",\"descrip\
+  tion\":\"The date of the last modification of the
+  feedback\",\"format\":\"date-time\"}}},\"SearchPrivateIndividualRequestDto\":{\
+  \"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"descri\
+  ption\":\"The query is used to search for private individuals matching email,
+  firstname or lastname
+  \"},\"AddressDto\":{\"required\":[\"line1\"],\"type\":\"object\",\"properties\
+  \":{\"city\":{\"$ref\":\"#/components/schemas/CityDto\"},\"line1\":{\"type\":\
+  \"string\",\"description\":\"first line address with
+  number\"}},\"description\":\"Address of a legal
+  entity\"},\"CityDto\":{\"required\":[\"country\",\"name\",\"postalCode\"],\"t\
+  ype\":\"object\",\"properties\":{\"postalCode\":{\"type\":\"string\",\"descri\
+  ption\":\"city postal
+  code\"},\"name\":{\"type\":\"string\",\"description\":\"city
+  name\"},\"country\":{\"$ref\":\"#/components/schemas/CountryDto\"}},\"descrip\
+  tion\":\"City used for LegalEntities
+  address\"},\"ContactInformationDto\":{\"type\":\"object\",\"properties\":{\"p\
+  honeNumber\":{\"type\":\"string\",\"description\":\"phone number
+  (international format without any
+  space)\"},\"email\":{\"type\":\"string\",\"description\":\"email\"}},\"descri\
+  ption\":\"Contact information without private
+  individual\"},\"CountryDto\":{\"required\":[\"code\",\"name\"],\"type\":\"obj\
+  ect\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"country
+  code\"},\"name\":{\"type\":\"string\",\"description\":\"country
+  name\"}},\"description\":\"Country used for
+  city\"},\"LegalEntityDetailsDto\":{\"required\":[\"SIREN\",\"commercialName\",\
+  \"officialName\"],\"type\":\"object\",\"properties\":{\"officialName\":{\"type\
+  \":\"string\"},\"commercialName\":{\"type\":\"string\"},\"legalStructure\":{\
+  \"type\":\"string\"},\"creationYear\":{\"type\":\"integer\",\"format\":\"int32\
+  \",\"deprecated\":true},\"creationDate\":{\"type\":\"string\"},\"address\":{\
+  \"$ref\":\"#/components/schemas/AddressDto\"},\"siret\":{\"type\":\"string\"},\
+  \"nicCode\":{\"type\":\"string\"},\"SIREN\":{\"type\":\"string\"},\"APECode\"\
+  :{\"type\":\"string\"}}},\"LegalEntityWithDetailsDto\":{\"type\":\"object\",\
+  \"properties\":{\"id\":{\"type\":\"string\",\"description\":\"ID PM, legal
+  entity's unique ID, format is :
+  /ENT\\\\d{8}/\"},\"legacyBcpId\":{\"type\":\"string\",\"description\":\"Legacy
+  ID PM, format is: 7
+  digits\"},\"details\":{\"$ref\":\"#/components/schemas/LegalEntityDetailsDto\
+  \"}},\"description\":\"Legal entities with details if SIREN linked to Private
+  Individual\"},\"PrivateIndividualRoleDto\":{\"type\":\"object\",\"properties\
+  \":{\"id\":{\"type\":\"string\",\"description\":\"Private invidvidual role
+  identifier\"},\"role\":{\"type\":\"string\",\"description\":\"Role used for
+  Private
+  Individual\",\"enum\":[\"LEGAL_REPRESENTATIVE\",\"DELEGATE\"]},\"isCertified\
+  \":{\"type\":\"boolean\",\"description\":\"Is role
+  certified\"},\"startDate\":{\"type\":\"string\",\"description\":\"Start date
+  of the
+  role\",\"format\":\"date\"},\"endDate\":{\"type\":\"string\",\"description\":\
+  \"End date of the
+  role\",\"format\":\"date\"},\"legalEntity\":{\"$ref\":\"#/components/schemas/\
+  LegalEntityWithDetailsDto\"},\"contactInformation\":{\"$ref\":\"#/components/\
+  schemas/ContactInformationDto\"}},\"description\":\"Private individual roles
+  with attached legal entities with
+  details\"},\"PrivateIndividualWithRoleDto\":{\"type\":\"object\",\"properties\
+  \":{\"id\":{\"type\":\"string\",\"description\":\"ID PP, physical person's
+  unique id, format is :
+  /PP\\\\d{8}/\"},\"civility\":{\"type\":\"string\",\"description\":\"Civility
+  from id
+  card\",\"enum\":[\"MAN\",\"WOMAN\"]},\"name\":{\"type\":\"string\",\"descript\
+  ion\":\"Name from id
+  card.\"},\"firstName\":{\"type\":\"string\",\"description\":\"First name from
+  id card.\"},\"birthday\":{\"type\":\"string\",\"description\":\"Birthday from
+  id card :
+  YYYY-mm-dd\",\"format\":\"date\"},\"birthCity\":{\"type\":\"string\",\"descri\
+  ption\":\"City of birth from id card. If in France, the city's INSEE code
+  should be
+  used\"},\"birthCountry\":{\"type\":\"string\",\"description\":\"Birth country
+  from Ubble, encoded on 3 letters following ISO ALPHA-3
+  (ISO_3166-1_alpha-3)\"},\"createdDate\":{\"type\":\"string\",\"description\":\
+  \"last created
+  date\",\"format\":\"date-time\"},\"lastModifiedDate\":{\"type\":\"string\",\"\
+  description\":\"last modified
+  date\",\"format\":\"date-time\"},\"roles\":{\"type\":\"array\",\"description\
+  \":\"Role with legal entities with details if has
+  SIREN\",\"items\":{\"$ref\":\"#/components/schemas/PrivateIndividualRoleDto\"\
+  }}},\"description\":\"Private individual with attached legal entities with
+  details\"},\"PrivateIndividualIdentificationDto\":{\"required\":[\"birthCity\
+  \",\"birthCityCode\",\"birthCountry\",\"birthday\",\"civility\",\"firstName\",\
+  \"isBirthCityCodeFromInsee\",\"name\"],\"type\":\"object\",\"properties\":{\"\
+  civility\":{\"type\":\"string\",\"description\":\"Civility from id
+  card\",\"enum\":[\"MAN\",\"WOMAN\"]},\"name\":{\"type\":\"string\",\"descript\
+  ion\":\"Name from id
+  card.\"},\"firstName\":{\"type\":\"string\",\"description\":\"First name from
+  id card.\"},\"birthday\":{\"type\":\"string\",\"description\":\"Birthday from
+  id card :
+  YYYY-mm-dd\",\"format\":\"date\"},\"birthCity\":{\"type\":\"string\",\"descri\
+  ption\":\"City of
+  birth.\"},\"birthCityCode\":{\"type\":\"string\",\"description\":\"Code of
+  city of
+  birth.\"},\"isBirthCityCodeFromInsee\":{\"type\":\"boolean\",\"description\":\
+  \"The city code is sometimes from insee (Ubble) which is different from the
+  normal postcode. The code insee is used in
+  France\"},\"birthCountry\":{\"type\":\"string\",\"description\":\"Birth
+  country, encoded on 3 letters following ISO ALPHA-3
+  (ISO_3166-1_alpha-3)\"}},\"description\":\"Private individual
+  identification\"},\"SubdivisionSearchInputDto\":{\"type\":\"object\",\"proper\
+  ties\":{\"code\":{\"type\":\"string\"},\"divisionCode\":{\"type\":\"string\"}\
+  }},\"SubdivisionDto\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\
+  \"string\",\"format\":\"uuid\"},\"code\":{\"type\":\"string\"},\"label\":{\"t\
+  ype\":\"string\"}}},\"SubdivisionsDto\":{\"type\":\"object\",\"properties\":{\
+  \"subdivisions\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schem\
+  as/SubdivisionDto\"}}}},\"DivisionSearchInputDto\":{\"type\":\"object\",\"pro\
+  perties\":{\"code\":{\"type\":\"string\"}}},\"DivisionDto\":{\"type\":\"object\
+  \",\"properties\":{\"id\":{\"type\":\"string\",\"format\":\"uuid\"},\"code\":{\
+  \"type\":\"string\"},\"label\":{\"type\":\"string\"},\"subdivisions\":{\"type\
+  \":\"array\",\"items\":{\"$ref\":\"#/components/schemas/SubdivisionDto\"}}}},\
+  \"DivisionsDto\":{\"type\":\"object\",\"properties\":{\"divisions\":{\"type\":\
+  \"array\",\"items\":{\"$ref\":\"#/components/schemas/DivisionDto\"}}}},\"Sear\
+  chPartnerAdministrationDto\":{\"required\":[\"email\"],\"type\":\"object\",\"\
+  properties\":{\"divisionCode\":{\"type\":\"string\"},\"subdivisionCode\":{\"t\
+  ype\":\"string\"},\"email\":{\"type\":\"string\"}}},\"LegalEntityCreationDto\
+  \":{\"required\":[\"identifications\"],\"type\":\"object\",\"properties\":{\"\
+  identifications\":{\"type\":\"array\",\"description\":\"Identification
+  information of the
+  company\",\"items\":{\"$ref\":\"#/components/schemas/LegalEntityIdentificatio\
+  nDto\"}}}},\"LegalEntityIdentificationDto\":{\"required\":[\"type\",\"value\"\
+  ],\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\",\"descrip\
+  tion\":\"The type of
+  identification\",\"example\":\"SIREN\"},\"value\":{\"type\":\"string\",\"desc\
+  ription\":\"The value of the
+  identification\"}},\"description\":\"Identification information of the
+  company\"},\"InternalUsersSearchQueryDto\":{\"type\":\"object\",\"properties\
+  \":{\"query\":{\"type\":\"string\",\"description\":\"Allow the user to query
+  bpiInternalUsers by firstname,
+  lastname\"},\"directoryIds\":{\"uniqueItems\":true,\"type\":\"array\",\"descr\
+  iption\":\"Allow the user to query bpiInternalUsers by
+  directoryIds\",\"items\":{\"type\":\"string\",\"description\":\"Allow the user
+  to query bpiInternalUsers by directoryIds\"}}},\"description\":\"Used to query
+  bpiInternalUsers\"},\"Pageable\":{\"type\":\"object\",\"properties\":{\"sort\
+  \":{\"$ref\":\"#/components/schemas/Sort\"},\"pageNumber\":{\"type\":\"integer\
+  \",\"format\":\"int32\"},\"pageSize\":{\"type\":\"integer\",\"format\":\"int32\
+  \"},\"paged\":{\"type\":\"boolean\"},\"unpaged\":{\"type\":\"boolean\"},\"off\
+  set\":{\"type\":\"integer\",\"format\":\"int64\"}}},\"Sort\":{\"type\":\"obje\
+  ct\",\"properties\":{\"sorted\":{\"type\":\"boolean\"},\"unsorted\":{\"type\":\
+  \"boolean\"},\"empty\":{\"type\":\"boolean\"}}},\"BpiInternalUser\":{\"type\":\
+  \"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"directoryId\":{\"ty\
+  pe\":\"string\"},\"lastName\":{\"type\":\"string\"},\"firstName\":{\"type\":\
+  \"string\"},\"phoneNumber\":{\"type\":\"string\"},\"email\":{\"type\":\"string\
+  \"},\"regionalNetworkMeasureCenter\":{\"type\":\"integer\",\"format\":\"int32\
+  \"},\"regionalManagementMeasureCenter\":{\"type\":\"integer\",\"format\":\"in\
+  t32\"},\"agencyMeasureCenter\":{\"type\":\"integer\",\"format\":\"int32\"},\"\
+  serviceMeasureCenter\":{\"type\":\"integer\",\"format\":\"int32\"},\"mobilePh\
+  oneNumber\":{\"type\":\"string\"}}},\"ProjectNatureDto\":{\"type\":\"object\",\
+  \"properties\":{\"id\":{\"type\":\"string\",\"format\":\"uuid\"},\"name\":{\"\
+  type\":\"string\"}}},\"Division\":{\"type\":\"object\",\"properties\":{\"crea\
+  tedBy\":{\"type\":\"string\"},\"createdDate\":{\"type\":\"string\",\"format\":\
+  \"date-time\"},\"lastModifiedBy\":{\"type\":\"string\"},\"lastModifiedDate\":{\
+  \"type\":\"string\",\"format\":\"date-time\"},\"id\":{\"type\":\"string\",\"f\
+  ormat\":\"uuid\"},\"code\":{\"type\":\"string\"},\"label\":{\"type\":\"string\
+  \"},\"partnerOrganization\":{\"$ref\":\"#/components/schemas/PartnerOrganizat\
+  ion\"},\"subdivisions\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/component\
+  s/schemas/Subdivision\"}}}},\"PartnerOrganization\":{\"type\":\"object\",\"pr\
+  operties\":{\"createdBy\":{\"type\":\"string\"},\"createdDate\":{\"type\":\"s\
+  tring\",\"format\":\"date-time\"},\"lastModifiedBy\":{\"type\":\"string\"},\"\
+  lastModifiedDate\":{\"type\":\"string\",\"format\":\"date-time\"},\"id\":{\"t\
+  ype\":\"string\",\"format\":\"uuid\"},\"code\":{\"type\":\"string\"},\"label\
+  \":{\"type\":\"string\"}}},\"Subdivision\":{\"type\":\"object\",\"properties\
+  \":{\"createdBy\":{\"type\":\"string\"},\"createdDate\":{\"type\":\"string\",\
+  \"format\":\"date-time\"},\"lastModifiedBy\":{\"type\":\"string\"},\"lastModi\
+  fiedDate\":{\"type\":\"string\",\"format\":\"date-time\"},\"id\":{\"type\":\"\
+  string\",\"format\":\"uuid\"},\"code\":{\"type\":\"string\"},\"label\":{\"type\
+  \":\"string\"},\"division\":{\"$ref\":\"#/components/schemas/Division\"}}},\"\
+  PageSubdivisionDto\":{\"type\":\"object\",\"properties\":{\"totalPages\":{\"t\
+  ype\":\"integer\",\"format\":\"int32\"},\"totalElements\":{\"type\":\"integer\
+  \",\"format\":\"int64\"},\"first\":{\"type\":\"boolean\"},\"last\":{\"type\":\
+  \"boolean\"},\"sort\":{\"$ref\":\"#/components/schemas/Sort\"},\"pageable\":{\
+  \"$ref\":\"#/components/schemas/Pageable\"},\"numberOfElements\":{\"type\":\"\
+  integer\",\"format\":\"int32\"},\"size\":{\"type\":\"integer\",\"format\":\"i\
+  nt32\"},\"content\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/sc\
+  hemas/SubdivisionDto\"}},\"number\":{\"type\":\"integer\",\"format\":\"int32\
+  \"},\"empty\":{\"type\":\"boolean\"}}},\"PartnerAdministrationsDto\":{\"type\
+  \":\"object\",\"properties\":{\"partnerAdministrations\":{\"type\":\"array\",\
+  \"items\":{\"$ref\":\"#/components/schemas/PartnerAdministrationDto\"}}}},\"O\
+  utstandingDTO\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\
+  \"},\"productName\":{\"type\":\"string\"},\"lastUpdated\":{\"type\":\"string\
+  \",\"format\":\"date\"},\"contractAmount\":{\"type\":\"number\",\"format\":\"\
+  double\"},\"currentAmount\":{\"type\":\"number\",\"format\":\"double\"},\"nex\
+  tPaybackAmount\":{\"type\":\"number\",\"format\":\"double\"},\"nextPaybackDate\
+  \":{\"type\":\"string\",\"format\":\"date\"},\"displaySettings\":{\"$ref\":\"\
+  #/components/schemas/OutstandingDisplaySettings\"}},\"description\":\"Normali\
+  zed outstanding for display to
+  client\"},\"OutstandingDisplaySettings\":{\"type\":\"object\",\"properties\":{\
+  \"productId\":{\"type\":\"string\",\"description\":\"Product
+  id\"},\"contractAmountWording\":{\"type\":\"string\",\"description\":\"Contra\
+  ct Amount Wording (ex: Montant du
+  financement)\"},\"currentAmountWording\":{\"type\":\"string\",\"description\":\
+  \"Current Amount Wording (ex: Capital restant
+  dû)\"},\"nextPaybackWording\":{\"type\":\"string\",\"description\":\"Next
+  Payback Wording (ex: Montant et date prochain
+  loyer)\"}}},\"OutstandingsWithStatusDTO\":{\"type\":\"object\",\"properties\"\
+  :{\"isUnderperforming\":{\"type\":\"boolean\",\"description\":\"indicates
+  whether the firm is blacklisted by the API or
+  not\"},\"outstandings\":{\"type\":\"array\",\"description\":\"list of
+  outsandings of the firm if it is not
+  blacklisted\",\"items\":{\"$ref\":\"#/components/schemas/OutstandingDTO\"}}},\
+  \"description\":\"Outstandings bundled with client statut for display to
+  client\"},\"NafCsvDto\":{\"type\":\"object\",\"properties\":{\"ICONAF\":{\"ty\
+  pe\":\"string\"},\"LIBNAF\":{\"type\":\"string\"}}},\"LegalFormDto\":{\"type\
+  \":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"format\":\"uuid\"\
+  },\"code\":{\"type\":\"string\"},\"label\":{\"type\":\"string\"},\"category\"\
+  :{\"type\":\"integer\",\"format\":\"int64\"},\"validityBeginningDate\":{\"type\
+  \":\"string\",\"format\":\"date-time\"},\"validityEndDate\":{\"type\":\"string\
+  \",\"format\":\"date-time\"}}},\"BankingDataDto\":{\"required\":[\"iban\"],\"\
+  type\":\"object\",\"properties\":{\"iban\":{\"type\":\"string\",\"description\
+  \":\"The
+  IBAN\",\"example\":\"FR7630001007941234567890***\"},\"bankName\":{\"type\":\"\
+  string\",\"description\":\"The bank
+  name\"},\"bankAddress\":{\"type\":\"string\",\"description\":\"The bank
+  address\"},\"bankContactPhoneNumber\":{\"type\":\"string\",\"description\":\"\
+  The bank contact phone
+  number\"}}},\"FirmInformationResponseDTO\":{\"type\":\"object\",\"properties\
+  \":{\"hasProcedureCollective\":{\"type\":\"boolean\",\"description\":\"True if
+  legal entity has a procedure collective\"}},\"description\":\"Legal
+  informations from a firm collected from external
+  providers\"},\"FinancingNatureDto\":{\"type\":\"object\",\"properties\":{\"id\
+  \":{\"type\":\"string\",\"format\":\"uuid\"},\"label\":{\"type\":\"string\"},\
+  \"validityBeginningDate\":{\"type\":\"string\",\"format\":\"date-time\"},\"va\
+  lidityEndDate\":{\"type\":\"string\",\"format\":\"date-time\"}}},\"BusinessTy\
+  peDto\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"fo\
+  rmat\":\"uuid\"},\"code\":{\"type\":\"string\"},\"label\":{\"type\":\"string\
+  \"},\"validityBeginningDate\":{\"type\":\"string\",\"format\":\"date-time\"},\
+  \"validityEndDate\":{\"type\":\"string\",\"format\":\"date-time\"}}},\"PageBu\
+  sinessTypeDto\":{\"type\":\"object\",\"properties\":{\"totalPages\":{\"type\":\
+  \"integer\",\"format\":\"int32\"},\"totalElements\":{\"type\":\"integer\",\"f\
+  ormat\":\"int64\"},\"first\":{\"type\":\"boolean\"},\"last\":{\"type\":\"bool\
+  ean\"},\"sort\":{\"$ref\":\"#/components/schemas/Sort\"},\"pageable\":{\"$ref\
+  \":\"#/components/schemas/Pageable\"},\"numberOfElements\":{\"type\":\"integer\
+  \",\"format\":\"int32\"},\"size\":{\"type\":\"integer\",\"format\":\"int32\"},\
+  \"content\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Bu\
+  sinessTypeDto\"}},\"number\":{\"type\":\"integer\",\"format\":\"int32\"},\"em\
+  pty\":{\"type\":\"boolean\"}}},\"ActivitySectorDto\":{\"type\":\"object\",\"p\
+  roperties\":{\"id\":{\"type\":\"string\",\"format\":\"uuid\",\"deprecated\":t\
+  rue},\"code\":{\"type\":\"string\"},\"label\":{\"type\":\"string\"}}}},\"secu\
+  ritySchemes\":{\"bearer-key\":{\"type\":\"http\",\"scheme\":\"bearer\",\"bear\
+  erFormat\":\"JWT\"}}}}"
+contentType: yaml

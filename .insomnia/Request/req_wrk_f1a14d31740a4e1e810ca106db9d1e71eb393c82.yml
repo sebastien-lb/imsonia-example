@@ -1,0 +1,21 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71eb393c82
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076825
+created: 1624630076825
+url: "{{ base_url }}/legal-entities/{{ legalEntityId }}"
+name: Get legal entity by id
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1624630076825
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

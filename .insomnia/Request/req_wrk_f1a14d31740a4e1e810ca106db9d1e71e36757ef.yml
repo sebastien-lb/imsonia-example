@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71e36757ef
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076848
+created: 1624630076848
+url: "{{ base_url }}/search/bpi-internal-users"
+name: Search and return BPI internal user matching the request
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: query
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076848
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

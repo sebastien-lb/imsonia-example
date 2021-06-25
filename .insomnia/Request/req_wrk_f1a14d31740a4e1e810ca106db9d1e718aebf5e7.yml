@@ -1,0 +1,22 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e718aebf5e7
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076862
+created: 1624630076862
+url: "{{ base_url }}/partner/v1/administrations/data/transfoNumTpe/import"
+name: Import TransfoNumTPE Administrations data in DB
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1624630076862
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

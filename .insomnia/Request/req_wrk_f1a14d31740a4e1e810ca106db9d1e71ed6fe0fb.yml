@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71ed6fe0fb
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076867
+created: 1624630076867
+url: "{{ base_url }}/partner/v1/divisions/search"
+name: Find all divisions by email domain
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: email-domain
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076867
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

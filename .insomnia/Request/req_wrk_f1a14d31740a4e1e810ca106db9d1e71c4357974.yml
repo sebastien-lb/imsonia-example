@@ -1,0 +1,27 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71c4357974
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076849
+created: 1624630076849
+url: "{{ base_url }}/search/legal-entities"
+name: Search for a list of legal entities from a SIREN or a name.
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: query
+    disabled: false
+    value: string
+  - name: pageable
+    disabled: false
+    value: "[object Object]"
+headers: []
+authentication: {}
+metaSortKey: -1624630076849
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,33 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e710a25ba59
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076889
+created: 1624630076889
+url: "{{ base_url }}/partner/v1/administrations/{{ bankingAdministrationId }}"
+name: Update Banking Administrations data
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "administratorEmails": [
+        "string"
+      ],
+      "emailDomains": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076889
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

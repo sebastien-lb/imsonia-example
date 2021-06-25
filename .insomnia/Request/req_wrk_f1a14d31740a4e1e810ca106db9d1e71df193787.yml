@@ -1,0 +1,28 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71df193787
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076865
+created: 1624630076865
+url: "{{ base_url }}/partner/v1/divisions/search"
+name: Search divisions by criteria
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "code": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076865
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

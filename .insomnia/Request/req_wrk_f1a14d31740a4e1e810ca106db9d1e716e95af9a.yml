@@ -1,0 +1,21 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e716e95af9a
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076832
+created: 1624630076832
+url: "{{ base_url }}/outstandings/short-term/{{ companyId }}"
+name: Retrieve short term outstandings from eTreso
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1624630076832
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

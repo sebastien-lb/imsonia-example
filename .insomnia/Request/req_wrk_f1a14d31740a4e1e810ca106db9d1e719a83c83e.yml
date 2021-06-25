@@ -1,0 +1,33 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e719a83c83e
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076882
+created: 1624630076882
+url: "{{ base_url }}/user-feedback"
+name: Adds a line into the UserFeedback table
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "score": 10,
+      "comment": "This is awesome",
+      "scope": "cockpit",
+      "siren": "123456789",
+      "projectId": "123",
+      "lastModifiedDate": "2021-06-25T14:07:56.805Z"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076882
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

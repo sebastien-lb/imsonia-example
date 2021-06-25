@@ -1,0 +1,35 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71d0a7bb9b
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076877
+created: 1624630076877
+url: "{{ base_url }}/search/private-individual/identification"
+name: Get private individual corresponding to identification
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "civility": "string",
+      "name": "string",
+      "firstName": "string",
+      "birthday": "string",
+      "birthCity": "string",
+      "birthCityCode": "string",
+      "isBirthCityCodeFromInsee": true,
+      "birthCountry": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076877
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

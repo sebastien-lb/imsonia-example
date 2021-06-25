@@ -1,0 +1,35 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71d25d5f7f
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076873
+created: 1624630076873
+url: "{{ base_url }}/private-individuals/{{ privateIndividualId }}/roles"
+name: Attach a legal entity to a private individual
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "legalEntityId": "string",
+      "role": "string",
+      "userAccountId": "string",
+      "isCertified": true,
+      "startDate": "string",
+      "endDate": "string",
+      "email": "string",
+      "mobile": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076873
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

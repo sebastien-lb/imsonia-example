@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71b8ac8f7b
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076840
+created: 1624630076840
+url: "{{ base_url }}/partner/v1/divisions/{{ divisionCode }}/subdivisions"
+name: Get all subdivisions by division code
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: pageable
+    disabled: false
+    value: "[object Object]"
+headers: []
+authentication: {}
+metaSortKey: -1624630076840
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

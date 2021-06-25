@@ -1,0 +1,21 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e719ad6b1e2
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076813
+created: 1624630076813
+url: "{{ base_url }}/bpi-internal-users/{{ directoryId }}"
+name: Get a bpi internal user based on a directoryId
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1624630076813
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

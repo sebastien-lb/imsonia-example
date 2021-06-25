@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71a6ead77c
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076875
+created: 1624630076875
+url: "{{ base_url }}/private-individuals"
+name: Search and return private individuals according to request
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: query
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

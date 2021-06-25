@@ -1,0 +1,21 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71016e2683
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076842
+created: 1624630076842
+url: "{{ base_url }}/partner/v1/divisions/{{ divisionId }}"
+name: Get the division by id
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1624630076842
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

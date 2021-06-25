@@ -1,0 +1,27 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e7114b33bff
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076851
+created: 1624630076851
+url: "{{ base_url }}/search/legal-entity"
+name: Search for a legal entity from an identification code.
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: codeType
+    disabled: false
+    value: string
+  - name: codeValue
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076851
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

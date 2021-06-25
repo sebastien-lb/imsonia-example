@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71b0bb5a9b
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076826
+created: 1624630076826
+url: "{{ base_url }}/legal-forms/search"
+name: Search Legal forms
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: query
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076826
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

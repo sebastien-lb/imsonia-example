@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71b34688b2
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076846
+created: 1624630076846
+url: "{{ base_url }}/project-natures/search"
+name: Search all project natures
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: query
+    disabled: true
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076846
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

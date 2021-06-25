@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71058b8950
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076843
+created: 1624630076843
+url: "{{ base_url }}/partner/v1/divisions"
+name: Find divisions by division code
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: division-codes
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076843
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

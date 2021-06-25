@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e7117e8d5f8
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076811
+created: 1624630076811
+url: "{{ base_url }}/bpi-internal-users/by-email"
+name: Get a bpi internal user based on an e-mail address
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: email
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076811
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

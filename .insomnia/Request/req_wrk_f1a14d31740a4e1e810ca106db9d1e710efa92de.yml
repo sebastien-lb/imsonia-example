@@ -1,0 +1,36 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e710efa92de
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076892
+created: 1624630076892
+url: "{{ base_url }}/private-individuals/{{ privateIndividualId }}/roles/{{
+  roleId }}"
+name: Modify a role attached to a private individual
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "legalEntityId": "string",
+      "role": "string",
+      "userAccountId": "string",
+      "isCertified": true,
+      "startDate": "string",
+      "endDate": "string",
+      "email": "string",
+      "mobile": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076892
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

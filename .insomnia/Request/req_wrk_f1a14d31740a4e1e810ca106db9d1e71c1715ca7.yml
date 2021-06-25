@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71c1715ca7
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076815
+created: 1624630076815
+url: "{{ base_url }}/business-types"
+name: Get all business types
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: pageable
+    disabled: false
+    value: "[object Object]"
+headers: []
+authentication: {}
+metaSortKey: -1624630076815
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

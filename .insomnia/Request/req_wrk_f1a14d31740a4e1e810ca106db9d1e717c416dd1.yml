@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e717c416dd1
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076810
+created: 1624630076810
+url: "{{ base_url }}/activity-sectors/search"
+name: Search activity sectors
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: query
+    disabled: true
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076810
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e719ef5583f
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630647001
+created: 1624630076890
+url: "{{ base_url }}/private-individuals/{{ privateIndividualId }}/roles/{{
+  roleId }}/status"
+name: Change the status of a role attached to a private individual
+description: |
+  test comment
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "isCertified": true
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076890
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

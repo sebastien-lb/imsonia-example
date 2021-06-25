@@ -1,0 +1,27 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e7157cf5331
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076855
+created: 1624630076855
+url: "{{ base_url }}/legal-entities"
+name: Get legal entities by idList
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: idList
+    disabled: true
+    value: ""
+  - name: cpCodes
+    disabled: true
+    value: ""
+headers: []
+authentication: {}
+metaSortKey: -1624630076855
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

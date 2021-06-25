@@ -1,0 +1,33 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e7141f86391
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076854
+created: 1624630076854
+url: "{{ base_url }}/legal-entities"
+name: Post legal entity
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "identifications": [
+        {
+          "type": "SIREN",
+          "value": "string"
+        }
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1624630076854
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

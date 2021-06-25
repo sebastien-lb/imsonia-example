@@ -1,0 +1,22 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e716036b54b
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076858
+created: 1624630076858
+url: "{{ base_url }}/partner/v1/administrations/data/network/import"
+name: Import network Administrations data in DB
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1624630076858
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

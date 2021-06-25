@@ -1,0 +1,24 @@
+_id: req_wrk_f1a14d31740a4e1e810ca106db9d1e71efbd6354
+type: Request
+parentId: wrk_f1a14d31740a4e1e810ca106db9d1e71
+modified: 1624630076835
+created: 1624630076835
+url: "{{ base_url }}/partner/v1/administrations"
+name: find banking administrations from administrator emails
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: administrator-email
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1624630076835
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
